@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <!-- Vanta background: keep this empty and fixed -->
+  <div id="animation_bg"></div>
+
+  <!-- App must be OUTSIDE the Vanta container -->
+  <div class="weather-app">
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Current Weather -->
+    <div class="current-weather">
+      <div>
+        <h2 id="temp">--°C</h2>
+        <p id="description">Loading...</p>
+        <p id="details"></p>
+      </div>
+      <div>
+        <p id="location">Detecting location...</p>
+        <p id="time"></p>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-type="temp">Temperature</button>
+      <button class="tab" data-type="wind">Wind</button>
+      <button class="tab" data-type="precip">Precipitation</button>
+    </div>
+
+    <h3 class="forecast-title">Next 5 Days Forecast</h3>
+    <div class="forecast" id="forecast"></div>
+  </div>
+
+  <script src="oldjs.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+  <script>
+    // initialize Vanta after the element exists
+    VANTA.CLOUDS({
+      el: "#animation_bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      skyColor: 0x4db9ff
+    });
+  </script>
+</body>
+</html>
