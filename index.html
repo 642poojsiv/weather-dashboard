@@ -8,19 +8,19 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-  <!-- Vanta background: keep this empty and fixed -->
+
   <div id="animation_bg"></div>
 
-  <!-- App must be OUTSIDE the Vanta container -->
+  
   <div class="weather-app">
 
-    <!-- Search Bar -->
+    
     <div class="search-bar">
       <input type="text" id="cityInput" placeholder="Enter city name..." />
       <button id="searchBtn">Search</button>
     </div>
 
-    <!-- Current Weather -->
+    
     <div class="current-weather">
       <div>
         <h2 id="temp">--°C</h2>
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <!-- Tabs -->
+    
     <div class="tabs">
       <button class="tab active" data-type="temp">Temperature</button>
       <button class="tab" data-type="wind">Wind</button>
@@ -49,7 +49,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
   <script>
-    // initialize Vanta after the element exists
+    
     VANTA.CLOUDS({
       el: "#animation_bg",
       mouseControls: true,
@@ -62,4 +62,5 @@
   </script>
 </body>
 </html>
+
 
