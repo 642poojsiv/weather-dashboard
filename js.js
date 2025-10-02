@@ -1,4 +1,3 @@
-// js.js
 const forecastContainer = document.getElementById("forecast");
 const tempEl = document.getElementById("temp");
 const descEl = document.getElementById("description");
@@ -117,3 +116,4 @@ document.getElementById("searchBtn").addEventListener("click", () => {
 document.getElementById("cityInput").addEventListener("keypress", e => {
   if (e.key === "Enter") document.getElementById("searchBtn").click();
 });
+
